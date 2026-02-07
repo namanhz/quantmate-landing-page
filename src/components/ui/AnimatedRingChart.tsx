@@ -76,7 +76,7 @@ export default function AnimatedRingChart({
         {/* Center value */}
         <div className="absolute inset-0 flex items-center justify-center">
           <span className="font-heading text-xl md:text-2xl font-bold text-gold">
-            {value < 10 ? displayValue.toFixed(1) : Math.round(displayValue)}
+            {value < 10 && value % 1 !== 0 ? displayValue.toFixed(1) : Math.round(displayValue)}
             {suffix}
           </span>
         </div>
